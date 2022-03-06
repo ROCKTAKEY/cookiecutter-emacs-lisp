@@ -1,5 +1,6 @@
 {
   "project_name": "project-name",
+  "github_repository_name": "{{cookiecutter.project_name}}",
   "project_short_description": "Short description of your project",
   "email": "email@example.com",
   "full_name": "Your Name",

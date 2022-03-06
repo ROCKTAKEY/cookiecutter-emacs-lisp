@@ -7,7 +7,7 @@
 
 ;; Version: 0.0.0
 ;; Package-Requires: ((emacs "24.1"))
-;; URL: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}
+;; URL: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.github_project_name}}
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -31,7 +31,8 @@
 (defgroup {{cookiecutter.project_name}} ()
   "{{cookiecutter.project_short_description}}"
   :group '{{cookiecutter.keyword}}
-  :prefix "{{cookiecutter.project_name}}-")
+  :prefix "{{cookiecutter.project_name}}-"
+  :link '(url-link "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.github_project_name}}"))
 
 (provide '{{cookiecutter.project_name}})
 ;;; {{cookiecutter.project_name}}.el ends here
