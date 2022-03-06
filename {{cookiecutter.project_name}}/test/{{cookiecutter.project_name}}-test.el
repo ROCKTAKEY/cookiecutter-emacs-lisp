@@ -3,7 +3,6 @@
 ;; Copyright (C) {{cookiecutter.year}}  {{cookiecutter.full_name}}
 
 ;; Author: {{cookiecutter.full_name}} <{{cookiecutter.email}}>
-;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
