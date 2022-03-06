@@ -1,0 +1,6 @@
+(source gnu nongnu melpa)
+
+(package ({{cookiecutter.project_name}}
+          (recipe . (:fetcher github :repo "{{cookiecutter.github_username}}/{{cookiecutter.project_name}}"))))
+
+(dev-dependency undercover)
