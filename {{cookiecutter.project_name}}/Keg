@@ -1,6 +1,15 @@
 (source gnu nongnu melpa)
 
 (package ({{cookiecutter.project_name}}
-          (recipe . (:fetcher github :repo "{{cookiecutter.github_username}}/{{cookiecutter.project_name}}"))))
+          (recipe . (:fetcher github :repo "{{cookiecutter.github_username}}/{{cookiecutter.github_repository_name}}"))))
 
 (dev-dependency undercover)
+
+(script
+ (test
+  (let ((test-files (mapcar (lambda (file) (file-relative-name file "."))
+                            (directory-files "test" t "\\.el$"))))
+    (keg-shell (format "keg emacs --batch -Q -L . %s -f ert-run-tests-batch-and-exit"
+                       (mapconcat (apply-partially #'concat "--load=") test-files " ")))))
+ (test-all
+  (keg-shell "keg clean-elc && keg run test && keg build && keg run test && keg clean-elc")))
