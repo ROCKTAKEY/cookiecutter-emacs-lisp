@@ -1,7 +1,7 @@
 [[https://github.com/ROCKTAKEY/cookiecutter-emacs-lisp][https://img.shields.io/github/tag/ROCKTAKEY/cookiecutter-emacs-lisp.svg?style=flat-square]]
 [[file:LICENSE][https://img.shields.io/github/license/ROCKTAKEY/cookiecutter-emacs-lisp.svg?style=flat-square]]
 * Cookiecutter template for Emacs package
-Cookiecutter template for Emacs package!
+Cookiecutter template for Emacs package to publish in GitHub!
 
 - Test with =ert= (run by =keg run test= or =keg run test-all=)
 - Coverage measurement with [[https://github.com/undercover-el/undercover.el][undercover.el]]
