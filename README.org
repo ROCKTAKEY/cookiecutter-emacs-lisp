@@ -1,0 +1,50 @@
+[[https://github.com/ROCKTAKEY/cookiecutter-emacs-lisp][https://img.shields.io/github/tag/ROCKTAKEY/cookiecutter-emacs-lisp.svg?style=flat-square]]
+[[file:LICENSE][https://img.shields.io/github/license/ROCKTAKEY/cookiecutter-emacs-lisp.svg?style=flat-square]]
+* Cookiecutter template for Emacs package
+Cookiecutter template for Emacs package!
+
+- Test with =ert= (run by =keg run test= or =keg run test-all=)
+- Coverage measurement with [[https://github.com/undercover-el/undercover.el][undercover.el]]
+- Sending coverage to [[https://coveralls.io/][coverall]]
+- Package management with [[https://github.com/conao3/keg.el][keg.el]]
+
+* How to Use?
+1. Install cookiecutter. See [[https://cookiecutter.readthedocs.io][document]].
+2. Install keg. See [[https://github.com/conao3/keg.el#install][document]].
+3. Run shell command to create new Emacs package:
+   #+BEGIN_SRC shell
+     cookiecutter https://github.com/ROCKTAKEY/cookiecutter-emacs-lisp
+   #+END_SRC
+   You can use =-f= option to use this template to existing directory.
+   Note that this option allow cookiecutter to overwrite existing files.
+
+* Variables
+** project_name
+Project name for Emacs package. This is used as filename and feature symbol of the package.
+It should be =chain-case=.
+
+** github_repository_name
+Repository name in GitHub. By default, =project_name= is used.
+This is used to generate URL of your project.
+
+** project_short_description
+Short description of your project. This is used as header of README and main Emacs Lisp file.
+It should not include the word "Emacs" because =package-lint= warn if header of main file include the word.
+
+** email, full_name
+Your email address and full name. They are used as header of Emacs Lisp file.
+
+** github_username
+Your username in GitHub. This is used to generate URL of your project.
+
+** year
+Current year. Usually, you do not have to edit this. This is used to create copyright section in header of main file.
+
+** keyword
+Keyword which represents your project. It is used as header of main file, and as parent group of ~defgroup~.
+You can set another group as parent group of ~defgroup~ if your package deeply depends on other package.
+Note that keword section in header of main file can include multiple keyword, so you can add additional keywords
+from the options, but any other keyword like group defined by =defgroup= is not permitted.
+
+* License
+  This package is licensed by GPLv3. See [[file:LICENSE][LICENSE]].
