@@ -31,6 +31,9 @@
             (:report-file "coverage-final.json")
             (:send-report nil))
 
+(require '{{cookiecutter.project_name}})
+
+
 
 
 (provide '{{cookiecutter.project_name}}-test)
