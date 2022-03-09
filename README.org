@@ -18,6 +18,82 @@ Cookiecutter template for Emacs package to publish in GitHub!
    You can use =-f= option to use this template to existing directory.
    Note that this option allow cookiecutter to overwrite existing files.
 
+* Usage
+** Main file
+The main file is el file on root. Write your code here.
+Of course, you can add any el files.
+
+** Dependency
+You can install all dependency by command:
+#+BEGIN_SRC shell
+  keg install
+#+END_SRC
+Note that you should re-run this command if you edit dependency and dev-dependency.
+
+If you want to add dependency, add to =Package-Reqiures:= section in *main file* header like:
+#+BEGIN_SRC emacs-lisp
+  ;; Package-Requires: ((emacs "24.1") (new-dependency1 "1.0") (new-dependency "4.1.5"))
+#+END_SRC
+
+If you want to add dev-dependency, add to *Keg file* like:
+#+BEGIN_SRC emacs-lisp
+  (dev-dependency undercover
+                  new-dev-dependency-1
+                  new-dev-dependency-2)
+#+END_SRC
+
+** Linting and testing
+*** Linting
+No error and warning from =package-lint=, =checkdoc= and =byte-compiler= (run by =keg lint=) is on this template.
+Keeping no error keeps your code clean.
+All your commits are linted on GitHub Actions, so you can notice warnings immediately.
+
+To lint on command line, run:
+#+BEGIN_SRC shell
+keg lint
+#+END_SRC
+
+To byte-compile, run:
+#+BEGIN_SRC shell
+keg build
+#+END_SRC
+
+To remove byte-compiled files, run:
+#+BEGIN_SRC shell
+keg clean-elc
+#+END_SRC
+
+To remove all dependencies and byte-compiled files, run:
+#+BEGIN_SRC shell
+keg clean
+#+END_SRC
+
+*** Testing
+You can test your project by =ert=.
+
+Coverage is automatically measured by undercover.el and sent to codecov, if you use public repository.
+You should set environmental variable and put it into =.github/workflows/test.yml=.
+See [[https://github.com/marketplace/actions/codecov#usage][here]].
+
+To run short test (without byte-compile) on command line, run:
+#+BEGIN_SRC shell
+keg run test
+#+END_SRC
+
+To run full test (with and without byte-compile) on command line, run:
+#+BEGIN_SRC shell
+keg run test-all
+#+END_SRC
+
+
+** Other keg features
+You can see help by command:
+#+BEGIN_SRC shell
+  keg help
+#+END_SRC
+
+To get more information, See [[https://github.com/conao3/keg.el][document]].
+
 * Variables
 ** project_name
 Project name for Emacs package. This is used as filename and feature symbol of the package.
