@@ -13,6 +13,7 @@ jobs:
         os:
           - ubuntu-latest
           - macos-latest
+          - windows-latest
         emacs_version:
           - '24.1'
           - '24.2'
@@ -31,8 +32,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: purcell/setup-emacs@master
+        if: ${{ contains(fromJson('["ubuntu-latest" "macos-latest"]'), matrix.os) }}
         with:
           version: ${{ matrix.emacs_version }}
+      - uses: jcs090218/setup-emacs-windows@master
+        if: matrix.os == 'windows-latest'
       - uses: conao3/setup-keg@master
 
       - run: keg install
