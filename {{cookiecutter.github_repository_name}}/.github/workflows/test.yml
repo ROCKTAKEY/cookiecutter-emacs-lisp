@@ -4,12 +4,15 @@ on: [push, pull_request]
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     continue-on-error:
       ${{ contains(fromJson('["snapshot"]'), matrix.emacs_version) }}
     strategy:
       fail-fast: false
       matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
         emacs_version:
           - '24.1'
           - '24.2'
