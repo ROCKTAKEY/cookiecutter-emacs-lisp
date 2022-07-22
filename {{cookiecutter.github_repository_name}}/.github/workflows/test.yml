@@ -50,6 +50,6 @@ jobs:
       - uses: actions/checkout@v1
       - uses: purcell/setup-emacs@master
         with:
-          version: '27.2'
+          version: '28.1'
       - uses: conao3/setup-keg@master
       - run: keg lint
