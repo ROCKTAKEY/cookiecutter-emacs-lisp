@@ -1,7 +1,7 @@
 [[https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}][https://img.shields.io/github/tag/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}.svg?style=flat-square]]
 [[file:LICENSE][https://img.shields.io/github/license/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}.svg?style=flat-square]]
 [[https://codecov.io/gh/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}?branch=master][https://img.shields.io/codecov/c/github/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}.svg?style=flat-square]]
-[[https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}/actions][https://img.shields.io/github/workflow/status/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}/test/master.svg?style=flat-square]]
+[[https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}/actions][https://img.shields.io/github/actions/workflow/status/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}/test.yml.svg?branch=master&style=flat-square]]
 * {{cookiecutter.project_name}}: {{cookiecutter.project_short_description}}
 
 * How to Use?
