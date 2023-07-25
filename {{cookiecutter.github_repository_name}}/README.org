@@ -6,4 +6,4 @@
 
 * How to Use?
 * License
-  This package is licensed by GPLv3. See [[file:LICENSE][LICENSE]].
+This package is licensed by The GNU General Public License verson 3 or later. See [[file:LICENSE][LICENSE]].
