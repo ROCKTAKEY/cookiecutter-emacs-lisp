@@ -1,6 +1,7 @@
 ;;; {{cookiecutter.project_name}}.el --- {{cookiecutter.project_short_description}}  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) {{cookiecutter.year}}  {{cookiecutter.full_name}}
+;; SPDX-License-Identifier:  GPL-3.0-or-later
 
 ;; Author: {{cookiecutter.full_name}} <{{cookiecutter.email}}>
 ;; Keywords: {{cookiecutter.keyword}}
