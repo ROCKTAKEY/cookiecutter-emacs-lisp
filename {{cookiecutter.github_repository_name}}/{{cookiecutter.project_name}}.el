@@ -1,7 +1,6 @@
 ;;; {{cookiecutter.project_name}}.el --- {{cookiecutter.project_short_description}}  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) {{cookiecutter.year}}  {{cookiecutter.full_name}}
-;; SPDX-License-Identifier:  GPL-3.0-or-later
 
 ;; Author: {{cookiecutter.full_name}} <{{cookiecutter.email}}>
 ;; Keywords: {{cookiecutter.keyword}}
@@ -9,6 +8,8 @@
 ;; Version: 0.0.0
 ;; Package-Requires: ((emacs "24.1"))
 ;; URL: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.github_repository_name}}
+
+;; SPDX-License-Identifier:  GPL-3.0-or-later
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
