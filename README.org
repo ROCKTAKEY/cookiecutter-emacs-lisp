@@ -85,7 +85,6 @@ To run full test (with and without byte-compile) on command line, run:
 keg run test-all
 #+END_SRC
 
-
 ** Other keg features
 You can see help by command:
 #+BEGIN_SRC shell
@@ -93,6 +92,24 @@ You can see help by command:
 #+END_SRC
 
 To get more information, See [[https://github.com/conao3/keg.el][document]].
+
+** How to change license from GPL-3.0-or-later to another one
+1. Change LICENSE file
+2. Change "License" section, which is on bottom of README.org
+3. Change Emacs Lisp file header like:
+   #+BEGIN_SRC emacs-lisp
+     ;; This program is free software; you can redistribute it and/or modify
+     ;; it under the terms of the GNU General Public License as published by
+     ;; the Free Software Foundation, either version 3 of the License, or
+     ;; (at your option) any later version.
+   #+END_SRC
+   Note that the test file in "test" directory also has same header.
+4. Change =SPDX-License-Identifier= header in Emacs Lisp file
+   =SPDX-License-Identifier= describe license of the current file.
+   See [[https://spdx.org/licenses/][SPDX License List]] for available license identifier.
+   #+BEGIN_SRC emacs-lisp
+     ;; SPDX-License-Identifier:  GPL-3.0-or-later
+   #+END_SRC
 
 * Variables
 ** project_name
