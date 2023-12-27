@@ -93,6 +93,14 @@ You can see help by command:
 
 To get more information, See [[https://github.com/conao3/keg.el][document]].
 
+** How to change lowest supported version of Emacs
+1. Change =((emacs "24.1"))= on =;; Package-Requires:= section in =.el= file.
+2. Remove unneeded version of Emacs from =jobs.test.strategy.matrix.emacs_version= in =.github/workflows/test.yml=.
+3. Substract the number of the removed Emacs versions from =codecov.notify.after_n_builds= in =codecov.yml=.
+   - The final number should be ONE LESS THAN the number of elements of =jobs.test.strategy.matrix.emacs_version= in =.github/workflows/test.yml=.
+     The one means snapshot version of Emacs, which means HEAD. The GitHub Actions succeeds even if the test with snapshot is failed,
+     so it is substracted.
+
 ** How to change license from GPL-3.0-or-later to another one
 1. Change LICENSE file
 2. Change "License" section, which is on bottom of README.org
